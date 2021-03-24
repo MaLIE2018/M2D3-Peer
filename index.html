@@ -80,25 +80,29 @@
             </div>
         </div>
         <div class="container">
-            <h2 class="display-4">Welcome Summer</h2>
+            <div class="row">
+                <div class="col"><h2 class="display-4">Welcome Summer</h2></div>
+                <div class="col"><a class="btn btn-danger" href="#" onclick="addBadge()">Add Badge</a></div>
+            
+        </div>
             <div class="row no-gutter">
                 <div class="col-sm-6 col-md-4 col-lg-2 bg-success">
                     <div class="destination"> destination<span class = "welcome">HOT</span></div>
                 </div>
                 <div class="col-sm-6 col-md-4 col-lg-2 bg-success">
-                    <div class="destination welcome">destination</div>
+                    <div class="destination">destination<span class = "welcome">HOT</span></div>  
                 </div>
                 <div class="col-sm-6 col-md-4 col-lg-2 bg-success">
-                    <div class="destination welcome">destination</div>
+                    <div class="destination">destination<span class = "welcome">HOT</span></div>
                 </div>
                 <div class="col-sm-6 col-md-4 col-lg-2 bg-success">
-                    <div class="destination welcome">destination</div>
+                    <div class="destination">destination<span class = "welcome">HOT</span></div>
                 </div>
                 <div class="col-sm-6 col-md-4 col-lg-2 bg-success">
-                    <div class="destination welcome">destination</div>
+                    <div class="destination">destination<span class = "welcome">HOT</span></div>
                 </div>
                 <div class="col-sm-6 col-md-4 col-lg-2 bg-success">
-                    <div class="destination welcome">destination</div>
+                    <div class="destination">destination<span class = "welcome">HOT</span></div>
                 </div>
             </div>
         </div>
@@ -126,15 +130,15 @@
         </div>
 
         <div class="row no-gutter collapse" id="collapseExample">
-            <div class="col-sm-6 col-md-4 col-lg-2 bg-success"><img src="https://placehold.it/250" class="img-fluid cards-img-top" alt=""></div>
-            <div class="col-sm-6 col-md-4 col-lg-2 bg-success"><img src="https://placehold.it/250" class="img-fluid cards-img-top" alt=""></div>
-            <div class="col-sm-6 col-md-4 col-lg-2 bg-success"><img src="https://placehold.it/250" class="img-fluid cards-img-top" alt=""></div>
-            <div class="col-sm-6 col-md-4 col-lg-2 bg-success"><img src="https://placehold.it/250" class="img-fluid cards-img-top" alt=""></div>
-            <div class="col-sm-6 col-md-4 col-lg-2 bg-success"><img src="https://placehold.it/250" class="img-fluid cards-img-top" alt=""></div>
-            <div class="col-sm-6 col-md-4 col-lg-2 bg-success"><img src="https://placehold.it/250" class="img-fluid cards-img-top" alt=""></div>
-            <div class="col-sm-6 col-md-4 col-lg-2 bg-success"><img src="https://placehold.it/250" class="img-fluid cards-img-top" alt=""></div>
-            <div class="col-sm-6 col-md-4 col-lg-2 bg-success"><img src="https://placehold.it/250" class="img-fluid cards-img-top" alt=""></div>
-            <div class="col-sm-6 col-md-4 col-lg-2 bg-success"><img src="https://placehold.it/250" class="img-fluid cards-img-top" alt=""></div>
+            <div class="col-sm-6 col-md-4 col-lg-2 bg-success"><img src="https://placehold.it/250" class="img-fluid cards" alt=""></div>
+            <div class="col-sm-6 col-md-4 col-lg-2 bg-success"><img src="https://placehold.it/250" class="img-fluid cards" alt=""></div>
+            <div class="col-sm-6 col-md-4 col-lg-2 bg-success"><img src="https://placehold.it/250" class="img-fluid cards" alt=""></div>
+            <div class="col-sm-6 col-md-4 col-lg-2 bg-success"><img src="https://placehold.it/250" class="img-fluid cards" alt=""></div>
+            <div class="col-sm-6 col-md-4 col-lg-2 bg-success"><img src="https://placehold.it/250" class="img-fluid cards" alt=""></div>
+            <div class="col-sm-6 col-md-4 col-lg-2 bg-success"><img src="https://placehold.it/250" class="img-fluid cards" alt=""></div>
+            <div class="col-sm-6 col-md-4 col-lg-2 bg-success"><img src="https://placehold.it/250" class="img-fluid cards" alt=""></div>
+            <div class="col-sm-6 col-md-4 col-lg-2 bg-success"><img src="https://placehold.it/250" class="img-fluid cards" alt=""></div>
+            <div class="col-sm-6 col-md-4 col-lg-2 bg-success"><img src="https://placehold.it/250" class="img-fluid cards" alt=""></div>
             <div class="col-sm-6 col-md-4 col-lg-2 bg-success"><img src="https://placehold.it/250" class="img-fluid cards-img-top" alt=""></div>
             <div class="col-sm-6 col-md-4 col-lg-2 bg-success"><img src="https://placehold.it/250" class="img-fluid cards-img-top" alt=""></div>
             <div class="col-sm-6 col-md-4 col-lg-2 bg-success"><img src="https://placehold.it/250" class="img-fluid cards-img-top" alt=""></div>
@@ -242,7 +246,8 @@
                     <div class="col-sm-6 col-md-3 item">
                         <h3>Contact Us</h3>
                         <a class="btn btn-secondary" href="#" data-toggle="modal" data-target="#contactus">Contact Us</a>
-                        <a class="btn btn-danger" href="#" onclick="addBadge()">Add Badge</a>
+                        
+                        <a class="btn btn-primary" href="#" onclick="removeCard()">Remove Cards</a>
                     </div>
                     <div class="col-sm-6 col-md-3 item">
                         <h3>Services</h3>
@@ -309,18 +314,17 @@
 
         }
         const addBadge = function(){
-            let welcome = document.getElementsByClassName("welcome")
+            let welcome = document.querySelectorAll(".welcome")
+        
+            welcome.forEach((node)=>{
+                node.classList.toggle("badge")
+                node.classList.toggle("badge-danger")
+            })
+    } ;
 
-            for (let i=0; i<welcome.length; i++) {
-                if (welcome[i].classList.contains("badge badge-danger")) {
-            welcome[i].classList.remove("badge badge-danger");
-        }
-    else {
-        welcome[i].classList.add("badge badge-danger")
-    } //
-};
 
-            }
+       
+           
         
     </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
